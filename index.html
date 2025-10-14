@@ -1,12 +1,427 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages</title>
-</head>
-<body>
-    <h1>Welcome to My GitHub Page!</h1>
-    <p>This is a basic static webpage hosted on GitHub Pages.</p>
-</body>
-</html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forge CrossFit | Train Hard. Move Well. Live Strong.</title>
+    <meta name="description" content="Forge CrossFit gym: expert coaching, community-driven classes, foundational to competitive training. Join us for a free trial.">
+    <meta name="theme-color" content="#0d6efd">
+
+    <!-- Open Graph for rich sharing -->
+    <meta property="og:title" content="Forge CrossFit">
+    <meta property="og:description" content="Train Hard. Move Well. Live Strong.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517963628607-235ccdd5476f?w=1200&q=80&auto=format&fit=crop">
+
+    <!-- Bootstrap 5 (modern, no jQuery) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+      :root { --brand: #0d6efd; --brand-dark: #0b5ed7; }
+      html, body { height: 100%; }
+      body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif; }
+      .navbar-brand strong { letter-spacing: 0.5px; }
+      .hero {
+        background: radial-gradient(1200px 500px at 70% 0%, rgba(13, 110, 253, 0.18), transparent),
+                    url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+        color: #fff;
+      }
+      .backdrop {
+        backdrop-filter: saturate(140%) blur(2px);
+        background-color: rgba(18, 21, 25, 0.5);
+      }
+      .section-title { font-weight: 800; letter-spacing: -0.02em; }
+      .icon-badge {
+        width: 44px; height: 44px; border-radius: 10px;
+        display: inline-flex; align-items: center; justify-content: center;
+        background: rgba(13, 110, 253, 0.12); color: var(--brand);
+      }
+      .card-img-top { object-fit: cover; height: 220px; }
+      .feature { transition: transform 160ms ease, box-shadow 160ms ease; }
+      .feature:hover { transform: translateY(-3px); box-shadow: 0 1rem 2rem rgba(0,0,0,.08); }
+      .pricing-card { border-width: 2px; }
+      .btn-cta { padding: 0.8rem 1.2rem; font-weight: 600; }
+      .testimonial {
+        background: linear-gradient(180deg, rgba(13, 110, 253, 0.06), transparent);
+      }
+      .footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
+      .footer a:hover { color: #fff; text-decoration: underline; }
+      @media (min-width: 992px) {
+        .hero { min-height: 88vh; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Primary Navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <span class="icon-badge bg-primary text-white" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1a.5.5 0 0 0-.5.5V3H4a2 2 0 0 0-2 2v2.086A1.5 1.5 0 0 0 2.5 10H4v2a2 2 0 0 0 2 2h2.086a1.5 1.5 0 0 0 .914-.314L13 11.586V9a2 2 0 0 0-2-2H9V4a2 2 0 0 0-2-2H6.5z"/></svg></span>
+          <strong>Forge CrossFit</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+            <li class="nav-item"><a class="nav-link" href="#coaches">Coaches</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <a class="btn btn-primary ms-lg-3 btn-cta" href="#contact">Book Free Trial</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero d-flex align-items-center">
+      <div class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="backdrop rounded-4 p-4 p-md-5">
+              <h1 class="display-4 fw-bold mb-3">Train Hard. Move Well. Live Strong.</h1>
+              <p class="lead">Community-driven CrossFit training for every level—from foundations to competitive programming. Expert coaching. Real results.</p>
+              <div class="d-flex flex-wrap gap-2 gap-md-3 mt-3">
+                <a href="#pricing" class="btn btn-primary btn-cta">See Memberships</a>
+                <a href="#programs" class="btn btn-outline-light btn-cta">Explore Programs</a>
+              </div>
+              <div class="d-flex gap-4 mt-4 small">
+                <div class="d-flex align-items-center gap-2"><span class="badge text-bg-primary">Coach-led</span> Classes</div>
+                <div class="d-flex align-items-center gap-2"><span class="badge text-bg-primary">On-Ramp</span> for Beginners</div>
+                <div class="d-flex align-items-center gap-2"><span class="badge text-bg-primary">Open Gym</span> Access</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Programs / Features -->
+    <section id="programs" class="py-5 py-lg-6">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge rounded-pill text-bg-primary">Programs</span>
+          <h2 class="section-title mt-3">Built for every athlete</h2>
+          <p class="text-body-secondary">Progressive programming designed to build strength, conditioning, and skills—safely and effectively.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 feature">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="Group of athletes lifting barbells">
+              <div class="card-body">
+                <div class="icon-badge mb-3" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M1 8a2 2 0 0 0 2 2h1V6H3a2 2 0 0 0-2 2zm11-2v4h1a2 2 0 1 0 0-4h-1z"/><path d="M6 5h4v6H6z"/></svg></div>
+                <h5 class="card-title">CrossFit Classes</h5>
+                <p class="card-text">Daily coach-led classes combining strength, conditioning, and skill work for scalable training.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 feature">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop" alt="Coach guiding athlete on form">
+              <div class="card-body">
+                <div class="icon-badge mb-3" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a3 3 0 0 0-3 3v1H4a2 2 0 0 0-2 2v2h12V7a2 2 0 0 0-2-2h-1V4a3 3 0 0 0-3-3z"/></svg></div>
+                <h5 class="card-title">On-Ramp (Beginner)</h5>
+                <p class="card-text">Foundations program focused on technique, safety, and confidence before joining group classes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 feature">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b1?q=80&w=1200&auto=format&fit=crop" alt="Athlete performing cardio on assault bike">
+              <div class="card-body">
+                <div class="icon-badge mb-3" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2h12v2H2zM2 7h12v2H2zM2 12h12v2H2z"/></svg></div>
+                <h5 class="card-title">Open Gym</h5>
+                <p class="card-text">Flexible access for skill practice, accessory work, and following personalized programming.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 feature">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1550344071-84e96a0d9288?q=80&w=1200&auto=format&fit=crop" alt="Competitive athlete lifting heavy barbell">
+              <div class="card-body">
+                <div class="icon-badge mb-3" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M5 2h6v2H5z"/><path d="M2 6h12v8H2z"/></svg></div>
+                <h5 class="card-title">Competitor Track</h5>
+                <p class="card-text">Elevated training volume, progressions, and coaching for athletes targeting competition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule / CTA -->
+    <section id="schedule" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h2 class="section-title">Weekly class schedule</h2>
+            <p class="text-body-secondary">Morning, midday, and evening classes to fit your life. Drop-ins welcome.</p>
+            <div class="row row-cols-2 row-cols-md-3 g-3 mt-2">
+              <div class="col"><div class="p-3 border rounded-3 text-center">Mon–Fri<br><strong>6a, 7a, 12p, 5:30p</strong></div></div>
+              <div class="col"><div class="p-3 border rounded-3 text-center">Saturday<br><strong>9a Partner WOD</strong></div></div>
+              <div class="col"><div class="p-3 border rounded-3 text-center">Open Gym<br><strong>Daily 10a–4p</strong></div></div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-cta mt-4">Try a free class</a>
+          </div>
+          <div class="col-lg-6">
+            <img class="img-fluid rounded-4" src="https://images.unsplash.com/photo-1519974719765-e6559eac2575?q=80&w=1400&auto=format&fit=crop" alt="Group class during a workout">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaches -->
+    <section id="coaches" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge rounded-pill text-bg-primary">Team</span>
+          <h2 class="section-title mt-3">Meet the coaches</h2>
+          <p class="text-body-secondary">Certified, experienced, and here to make you better—safely.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1200&auto=format&fit=crop" alt="Coach portrait">
+              <div class="card-body">
+                <h5 class="card-title mb-1">Alex Parker</h5>
+                <div class="text-body-secondary">Head Coach • CF-L2</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=1200&auto=format&fit=crop" alt="Coach portrait">
+              <div class="card-body">
+                <h5 class="card-title mb-1">Maya Chen</h5>
+                <div class="text-body-secondary">Coach • CF-L1, USAW</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop" alt="Coach portrait">
+              <div class="card-body">
+                <h5 class="card-title mb-1">Jordan Ruiz</h5>
+                <div class="text-body-secondary">Coach • CF-L1, CPR/AED</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1594737625785-c6683fc19f88?q=80&w=1200&auto=format&fit=crop" alt="Coach portrait">
+              <div class="card-body">
+                <h5 class="card-title mb-1">Sam Torres</h5>
+                <div class="text-body-secondary">Coach • Mobility, Nutrition</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge rounded-pill text-bg-primary">Memberships</span>
+          <h2 class="section-title mt-3">Simple, flexible pricing</h2>
+          <p class="text-body-secondary">No contracts. Pause or cancel anytime. Student and first responder discounts available.</p>
+        </div>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-md-6 col-lg-4">
+            <div class="card pricing-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Foundations</h5>
+                <div class="display-6 fw-bold">$99</div>
+                <div class="text-body-secondary mb-3">One-time • 4 sessions</div>
+                <ul class="list-unstyled small d-grid gap-2">
+                  <li>Movement assessment</li>
+                  <li>Technique fundamentals</li>
+                  <li>Coach-led onboarding</li>
+                </ul>
+                <a class="btn btn-outline-primary w-100" href="#contact">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card pricing-card h-100 border-primary">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title">Unlimited</h5>
+                  <span class="badge text-bg-primary">Most Popular</span>
+                </div>
+                <div class="display-6 fw-bold">$169/mo</div>
+                <div class="text-body-secondary mb-3">Unlimited classes</div>
+                <ul class="list-unstyled small d-grid gap-2">
+                  <li>All CrossFit classes</li>
+                  <li>Open gym access</li>
+                  <li>Monthly goal check-ins</li>
+                </ul>
+                <a class="btn btn-primary w-100" href="#contact">Join Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card pricing-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">3x / Week</h5>
+                <div class="display-6 fw-bold">$149/mo</div>
+                <div class="text-body-secondary mb-3">12 classes / month</div>
+                <ul class="list-unstyled small d-grid gap-2">
+                  <li>Coach-led classes</li>
+                  <li>Access to Open Gym</li>
+                  <li>Flexible makeup policy</li>
+                </ul>
+                <a class="btn btn-outline-primary w-100" href="#contact">Enroll</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 testimonial">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4">
+            <h2 class="section-title">What members say</h2>
+            <p class="text-body-secondary">A supportive community and expert coaching that keeps you coming back.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="border rounded-4 p-4 h-100 bg-white">
+                  <p class="mb-3">“I’ve never felt stronger. Coaches actually care about my form and progress.”</p>
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=200&auto=format&fit=crop" width="44" height="44" class="rounded-circle" alt="Member portrait">
+                    <div><strong>Katherine</strong><div class="small text-body-secondary">Member since 2023</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="border rounded-4 p-4 h-100 bg-white">
+                  <p class="mb-3">“Great vibes and killer workouts. The class times fit my schedule perfectly.”</p>
+                  <div class="d-flex align-items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" width="44" height="44" class="rounded-circle" alt="Member portrait">
+                    <div><strong>Riley</strong><div class="small text-body-secondary">Member since 2022</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6">
+            <h2 class="section-title">Book your free trial</h2>
+            <p class="text-body-secondary">Tell us a bit about you and we’ll confirm your first class within one business day.</p>
+            <form class="row g-3" action="#" method="post" aria-label="Contact form">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Phone (optional)</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="(555) 555-5555" pattern="[0-9()+\-\s]*" inputmode="tel">
+              </div>
+              <div class="col-md-6">
+                <label for="interest" class="form-label">Interest</label>
+                <select class="form-select" id="interest" name="interest" required>
+                  <option value="" selected disabled>Choose...</option>
+                  <option>Foundations / On-Ramp</option>
+                  <option>Group Classes</option>
+                  <option>Open Gym</option>
+                  <option>Competitor Track</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-control" name="message" rows="4" placeholder="Goals, prior experience, preferred times..."></textarea>
+              </div>
+              <div class="col-12 d-flex align-items-center gap-2">
+                <button type="submit" class="btn btn-primary btn-cta">Request Trial</button>
+                <span class="text-body-secondary small">We’ll never share your info.</span>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div class="ratio ratio-4x3 rounded-4 overflow-hidden border">
+              <iframe title="Map to Forge CrossFit" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843821610613!2d144.95373531564776!3d-37.81627974201561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAwLjYiUyAxNDTCsDU3JzE2LjQiRQ!5e0!3m2!1sen!2s!4v1614031042000"></iframe>
+            </div>
+            <div class="mt-3 small text-body-secondary">
+              123 Industrial Ave, Suite 200 • Mon–Fri 6a–8p • Sat 9a–12p
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#">
+              <span class="icon-badge bg-primary text-white" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M6.5 1a.5.5 0 0 0-.5.5V3H4a2 2 0 0 0-2 2v2.086A1.5 1.5 0 0 0 2.5 10H4v2a2 2 0 0 0 2 2h2.086a1.5 1.5 0 0 0 .914-.314L13 11.586V9a2 2 0 0 0-2-2H9V4a2 2 0 0 0-2-2H6.5z"/></svg></span>
+              <strong>Forge CrossFit</strong>
+            </a>
+            <p class="text-body-secondary">Train hard, move well, live strong. Join a community that pushes—and supports—you.</p>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <h6 class="text-uppercase small">Explore</h6>
+            <ul class="list-unstyled">
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6 class="text-uppercase small">Contact</h6>
+            <ul class="list-unstyled">
+              <li>Email: <a href="mailto:hello@forgecf.example">hello@forgecf.example</a></li>
+              <li>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+              <li>Instagram: <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@forgecrossfit</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6 class="text-uppercase small">Hours</h6>
+            <ul class="list-unstyled text-body-secondary">
+              <li>Mon–Fri: 6:00a – 8:00p</li>
+              <li>Saturday: 9:00a – 12:00p</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+          <div class="small text-body-secondary">© <span id="year"></span> Forge CrossFit. All rights reserved.</div>
+          <div class="small"><a href="#" class="me-3">Privacy</a><a href="#">Terms</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // Minimal progressive enhancement
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
